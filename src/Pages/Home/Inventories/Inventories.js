@@ -13,8 +13,8 @@ const Inventories = () => {
     }, [])
     return (
         <div id='inventory'>
-            <h2 className='services-title'>Our Inventories</h2>
-            <div className="services-container">
+            <h2 className='inventories-title'>Our Inventories</h2>
+            <div className="inventories-container">
                 {
                     inventories.map(inventory => <Inventory
                         key={inventory._id}

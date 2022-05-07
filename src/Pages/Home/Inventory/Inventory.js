@@ -10,7 +10,7 @@ const Inventory = ({ inventory }) => {
         navigate(`/inventory/${id}`);
     }
     return (
-        <Card className='container service' style={{ width: '18rem' }}>
+        <Card className='container inventory' style={{ width: '18rem' }}>
             <Card.Img variant="top" src={img} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
@@ -18,7 +18,7 @@ const Inventory = ({ inventory }) => {
                 <h4>Quantity: {quantity}</h4>
                 <h4>Supplier: {supplierName}</h4>
                 <Card.Text>{description}</Card.Text>
-                <Button className='service-btn-style'  onClick={()=>navigateToInventoryDetail(_id)}>manage</Button>
+                <Button className='inventory-btn-style'  onClick={()=>navigateToInventoryDetail(_id)}>stock update</Button>
             </Card.Body>
         </Card>
     );

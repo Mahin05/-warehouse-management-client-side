@@ -15,14 +15,8 @@ const InventoryDetail = () => {
     const [user] = useAuthState(auth);
     let newQuantity;
 
-    const handlePlaceOrder = event => {
+    const handleDelivery = event => {
         event.preventDefault();
-        const setQuantity = () => {
-            const oldQuantity = event.target.quantity.value;
-            const newQuantity = oldQuantity - 1;
-            return newQuantity;
-        }
-
         const deliverey = {
             email: user.email,
             inventory: inventory.name,
@@ -38,7 +32,7 @@ const InventoryDetail = () => {
 
         }
         // Send a POST request
-        axios.post('http://localhost:5000/inventory',deliverey,setQuantity)
+        axios.post('http://localhost:5000/inventory',deliverey)
         .then(res => {
             // console.log(res)
             const {data} =res;
@@ -66,7 +60,7 @@ const InventoryDetail = () => {
 
     return (
         <div className='w-50 mx-auto'>
-            <form onSubmit={handlePlaceOrder}>
+            <form onSubmit={handleDelivery}>
                 {/* <input className='w-100 mb-2' type="text" value={user?.displayName} name="name" id="name" placeholder='name' required readOnly disabled /> <br /> */}
                 <img className='inventory-img' src={inventory.img} alt="" />
                 <input className='w-100 mb-2' type="email" value={user?.email} name="email" id="email" placeholder='email' required readOnly disabled /> <br />

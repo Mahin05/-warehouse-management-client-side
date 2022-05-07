@@ -31,16 +31,6 @@ const ManageInventories = () => {
             <button className='mt-4' onClick={goToAddItemPage}>Add New Item</button>
             <h2>Manage your Inventories</h2>
             <div className='services-container'>
-                {/* {
-                inventories.map(inventory => <div key={inventory._id}>
-                    <h5>{inventory.name} <button onClick={()=>handleDelete(inventory._id)}>X</button> </h5>
-                </div>)
-            } */}
-                {/* {
-                inventories.map(inventory => <div key={inventory._id}>
-                    <h5>{inventory.name} <button onClick={() => handleDelete(inventory._id)}>X</button> </h5>
-                </div>)
-            } */}
                 {
                     inventories.map(inventory =>
                         <Card className='container service' style={{ width: '18rem' }}>
