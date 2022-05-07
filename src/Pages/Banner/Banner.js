@@ -15,7 +15,7 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h1 className='text-dark'>ISLAMS VEHICLE CORPORATION</h1>
+                    <h1 className='text-color'>ISLAMS VEHICLE CORPORATION</h1>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -26,7 +26,7 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                <h1 className='text-dark'>ISLAMS VEHICLE CORPORATION</h1>
+                <h1  className='text-color'>ISLAMS VEHICLE CORPORATION</h1>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -37,7 +37,7 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                <h1>ISLAMS VEHICLE CORPORATION</h1>
+                <h1 className='text-color'>ISLAMS VEHICLE CORPORATION</h1>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>

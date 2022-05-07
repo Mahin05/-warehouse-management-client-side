@@ -1,7 +1,19 @@
 .bg-set{
-    background-color:silver;
+    background-color:darkblue;
+    padding: 30px;
 }
-.bg-set img{
-    width: 5%;
-    height: 5%;
+.comp-name{
+    color: white;
+    font-size: 150%;
+    font-weight: 600;
+}
+.link-style{
+    font-size: larger;
+}
+@media only screen and (max-width:576px){
+    .comp-name{
+        color: white;
+        font-size: 100%;
+        font-weight: 600;
+    }
 }

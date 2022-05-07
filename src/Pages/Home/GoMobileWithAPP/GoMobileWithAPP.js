@@ -4,8 +4,8 @@ import './GoMobileWithAPP.css'
 
 const GoMobileWithAPP = () => {
     return (
-        <div>
-            <h2>Go mobile with our iOS and Android app.</h2>
+        <div className='mob-app-style'>
+            <h2 className='app-h2'>Go mobile with our iOS and Android app.</h2>
             <div>
                 <a href="#"><img className='app-image' src="https://www.zoho.com/inventory/mobile/appstore.svg" alt="" />
                 </a>

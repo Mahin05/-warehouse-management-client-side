@@ -21,9 +21,8 @@ const Inventories = () => {
                         inventory={inventory}
                     ></Inventory>)
                 }
-                <NavLink as={Link} to="manageInventory" className='mt-3'><button>Manage Inventories</button></NavLink>
-
             </div>
+            <NavLink as={Link} to="manageInventory" className='mt-3'><button className='mng-invnt'>Manage Inventories</button></NavLink>
         </div>
     );
 };

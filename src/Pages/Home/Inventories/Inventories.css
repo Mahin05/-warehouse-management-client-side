@@ -5,11 +5,30 @@
 .inventories-title{
     text-align: center;
     color:darkred;
+    margin-top: 7%;
+    font-size: 300%;
+    font-weight: 700;
+}
+.mng-invnt{
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    color: white;
+    font-weight: 600;
 }
 
-/* Make services responsive */
+/* Make inventories responsive */
 @media only screen and (max-width:576px){
     .inventories-container{
         grid-template-columns: repeat(1,1fr);
+    }
+    .inventories-title{
+        text-align: center;
+        color:darkred;
+        margin-top: 7%;
+        font-size: 200%;
+        font-weight: 600;
+        margin-bottom: 4%;
     }
 }
