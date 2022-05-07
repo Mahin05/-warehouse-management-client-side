@@ -53,7 +53,7 @@ const ServiceDetail = () => {
                 <h3>Price:{service.price}</h3>
                 <h3>Quantity:{service.quantity}</h3>
                 <h3>Supplier:{service.supplierName}</h3>
-                <input className='btn btn-primary' type="submit" value="Place order" />
+                <input className='btn btn-primary' type="submit" value="Delivered" />
             </form>
         </div>
     );
