@@ -9,28 +9,36 @@ import useInventoryDetail from '../../hooks/useInventoryDetail'
 import './inventoryDetail.css'
 
 
-const ServiceDetail = () => {
+const InventoryDetail = () => {
     const { inventoryId } = useParams();
-    const [service] = useInventoryDetail(inventoryId);
+    const [inventory] = useInventoryDetail(inventoryId);
     const [user] = useAuthState(auth);
+    let newQuantity;
 
     const handlePlaceOrder = event => {
         event.preventDefault();
-        const order = {
+        const setQuantity = () => {
+            const oldQuantity = event.target.quantity.value;
+            const newQuantity = oldQuantity - 1;
+            return newQuantity;
+        }
+
+        const deliverey = {
             email: user.email,
-            service: service.name,
-            img:service.img,
-            description:service.description,
-            price:service.price,
-            quantity:service.quantity,
-            supplierName:service.supplierName,
+            inventory: inventory.name,
+            img:inventory.img,
+            description:inventory.description,
+            price:inventory.price,
+            // quantity:inventory.quantity,
+            // newQuantity : inventory-1,
+            supplierName:inventory.supplierName,
             inventoryId: inventoryId,
-            address: event.target.address.value,
+            // quantity: event.target.quantity.value,
             phone: event.target.phone.value
 
         }
         // Send a POST request
-        axios.post('https://serene-plateau-74796.herokuapp.com/order',order)
+        axios.post('http://localhost:5000/inventory',deliverey,setQuantity)
         .then(res => {
             // console.log(res)
             const {data} =res;
@@ -40,23 +48,53 @@ const ServiceDetail = () => {
             }
         })
     }
+    const handleRestock = event => {
+        const deliverey = {
+            quantity: event.target.quantity.value
+        }
+        // Send a POST request
+        axios.post('http://localhost:5000/inventory',deliverey)
+        .then(res => {
+            // console.log(res)
+            const {data} =res;
+            if(data.insertedId){
+                toast('Restocked!!');
+                event.target.reset();
+            }
+        })
+}
 
     return (
         <div className='w-50 mx-auto'>
-            <h2>Please order : {service.name}</h2>
+            <h2>{inventory.name}</h2>
             <form onSubmit={handlePlaceOrder}>
                 {/* <input className='w-100 mb-2' type="text" value={user?.displayName} name="name" id="name" placeholder='name' required readOnly disabled /> <br /> */}
+                <img className='inventory-img' src={inventory.img} alt="" />
                 <input className='w-100 mb-2' type="email" value={user?.email} name="email" id="email" placeholder='email' required readOnly disabled /> <br />
-                <h3>id: {inventoryId}</h3>
-                <img src={service.img} alt="" />
-                <p>{service.description}</p>
-                <h3>Price:{service.price}</h3>
-                <h3>Quantity:{service.quantity}</h3>
-                <h3>Supplier:{service.supplierName}</h3>
+                <input className='w-100 mb-2' type="text" value={inventoryId} name="inventoryId" id="inventoryId" placeholder='inventoryId' required readOnly disabled /> <br />
+                <input className='w-100 mb-2' type="text" value={inventory.name} name="inventory" id="inventory" placeholder='service' required readOnly disabled /> <br />
+                <FloatingLabel controlId="floatingTextarea2" label={inventory.description}>
+                    <Form.Control
+                        as="textarea"
+                        className='mb-2'
+                        placeholder="Leave a comment here"
+                        style={{ height: '100px' }}
+                        readOnly
+                        disabled
+                    />
+                </FloatingLabel>
+                <input className='w-100 mb-2' type="text" value={inventory.price} name="price" id="price" placeholder='price' required readOnly disabled/> <br />
+                <input className='w-100 mb-2' type="text" value={inventory.supplierName} name="price" id="price" placeholder='price' required readOnly disabled/> <br />
+                <input className='w-100 mb-2' type="text" value={inventory.quantity} name="quantity" id="quantity" placeholder='quantity' required readOnly disabled/> <br />
                 <input className='btn btn-primary' type="submit" value="Delivered" />
+            </form>
+            <form onSubmit={handleRestock}>
+                <h2>Restock the item</h2>
+                <input type="number" /> <br />
+                <input type="submit" value="Restock" />
             </form>
         </div>
     );
 };
 
-export default ServiceDetail;
+export default InventoryDetail;

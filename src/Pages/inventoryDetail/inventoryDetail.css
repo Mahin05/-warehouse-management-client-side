@@ -4,6 +4,10 @@
 .text-style{
     color: darkred;
 }
+.inventory-img{
+    width: 50%;
+    height: 50%;
+}
 @media only screen and (max-width:576px){
     .form-set-style{
         margin-top: 20%;

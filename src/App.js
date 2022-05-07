@@ -7,6 +7,7 @@ import Register from './Pages/Register/Register'
 import InventoryDetail from './Pages/inventoryDetail/inventoryDetail'
 import RequiredAuth from './Pages/RequiredAuth/RequiredAuth';
 import Footer from './Pages/Shared/Footer/Footer'
+import AddInventory from './Pages/AddInventory/AddInventory';
 
 
 
@@ -24,6 +25,11 @@ function App() {
             <InventoryDetail></InventoryDetail>
           </RequiredAuth>
         } />
+        <Route path='/additem' element={
+          <RequiredAuth>
+            <AddInventory></AddInventory>
+          </RequiredAuth>
+        }></Route>
         </Routes>
         <Footer></Footer>
     </div>
