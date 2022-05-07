@@ -35,7 +35,7 @@ const SocialLogin = () => {
             </div>
             <p>{errorElement}</p>
             <div className='btn-style-set'>
-                <button onClick={()=>signInWithGoogle()} className='btn btn-color mt-3'><img src={google} alt="" />Google sign in</button>
+                <button onClick={() => signInWithGoogle()} className='btn btn-color mt-3'><img src={google} alt="" />Google sign in</button>
             </div>
         </div>
     );
