@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Service from '../Service/Service';
-import './Services.css'
+import Service from '../Inventory/Inventory';
+import './Inventories.css'
 
 const Services = () => {
     const [services,setServices] = useState([]);

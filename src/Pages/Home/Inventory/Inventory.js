@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import './Service.css'
+import './Inventory.css'
 
 const Service = ({ service }) => {
     const { _id, name,quantity, supplierName,price, img, description } = service;

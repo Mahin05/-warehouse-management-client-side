@@ -6,7 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import useInventoryDetail from '../../hooks/useInventoryDetail'
-import './ServiceDetails.css'
+import './inventoryDetail.css'
 
 
 const ServiceDetail = () => {
