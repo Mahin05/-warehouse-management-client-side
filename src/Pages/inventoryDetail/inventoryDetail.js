@@ -32,7 +32,7 @@ const InventoryDetail = () => {
 
         }
         // Send a POST request
-        axios.post('http://localhost:5000/inventory',deliverey)
+        axios.post('https://nameless-mesa-10052.herokuapp.com/inventory',deliverey)
         .then(res => {
             // console.log(res)
             const {data} =res;
@@ -47,7 +47,7 @@ const InventoryDetail = () => {
             quantity: event.target.quantity.value
         }
         // Send a POST request
-        axios.post('http://localhost:5000/inventory',deliverey)
+        axios.post('https://nameless-mesa-10052.herokuapp.com/inventory',deliverey)
         .then(res => {
             // console.log(res)
             const {data} =res;
