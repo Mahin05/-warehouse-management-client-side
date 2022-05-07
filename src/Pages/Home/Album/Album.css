@@ -1,0 +1,11 @@
+.album{
+    width: 50%;
+}
+.album h2{
+ color: darkred;
+}
+@media only screen and (max-width:576px){
+    .album{
+        width: 80%;
+    }
+}

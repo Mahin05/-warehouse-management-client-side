@@ -1,0 +1,17 @@
+.service{
+    margin-bottom: 10%;
+    background-color: rgba(210, 105, 30, 0.021);
+}
+.service img{
+    margin-top: 10px;
+    margin-left: 10%;
+    height: 70%;
+    width: 80%;
+}
+.service-btn-style{
+    background-color:darkred;
+    border: none;
+}
+.service-btn-style:hover{
+    background-color: rgba(139, 0, 0, 0.815);
+}

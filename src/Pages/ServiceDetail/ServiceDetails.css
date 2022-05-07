@@ -1,0 +1,15 @@
+.checkout-btn-style{
+    margin-top: 5px;
+}
+.text-style{
+    color: darkred;
+}
+@media only screen and (max-width:576px){
+    .form-set-style{
+        margin-top: 20%;
+    }
+    .checkout-btn-style{
+        margin-top: 10px;
+        margin-bottom: 68%;
+    }
+}
