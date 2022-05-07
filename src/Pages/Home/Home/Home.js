@@ -1,12 +1,16 @@
 import React from 'react';
 import Banner from '../../Banner/Banner';
-import Services from '../Inventories/Inventories';
+import Inventories from '../Inventories/Inventories';
+import SomeWords from '../SomeWords/SomeWords'
+import SiteInfo from '../SiteInfo/SiteInfo'
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <Services></Services>
+            <Inventories></Inventories>
+            <SomeWords></SomeWords>
+            <SiteInfo></SiteInfo>
         </div>
     );
 };

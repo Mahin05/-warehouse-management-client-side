@@ -1,11 +1,11 @@
 import React from 'react';
 
-const SiteInfo = () => {
+const New = () => {
     return (
         <div>
-            <h2>Site Info</h2>
+            
         </div>
     );
 };
 
-export default SiteInfo;
+export default New;

@@ -5,7 +5,6 @@ import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register'
 import InventoryDetail from './Pages/inventoryDetail/inventoryDetail'
-import siteInfo from './Pages/Home/siteInfo/siteInfo'
 import RequiredAuth from './Pages/RequiredAuth/RequiredAuth';
 
 
@@ -23,7 +22,6 @@ function App() {
             <InventoryDetail></InventoryDetail>
           </RequiredAuth>
         } />
-        <Route path="/siteInfo" element={<siteInfo></siteInfo>} />
         </Routes>
     </div>
   );

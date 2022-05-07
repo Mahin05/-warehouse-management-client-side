@@ -3,8 +3,8 @@ import { Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './Inventory.css'
 
-const Service = ({ service }) => {
-    const { _id, name,quantity, supplierName,price, img, description } = service;
+const Inventory = ({ inventory }) => {
+    const { _id, name,quantity, supplierName,price, img, description } = inventory;
     const navigate = useNavigate();
     const navigateToServiceDetail = id => {
         navigate(`/inventory/${id}`);
@@ -24,4 +24,4 @@ const Service = ({ service }) => {
     );
 };
 
-export default Service;
+export default Inventory;
