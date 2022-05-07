@@ -1,0 +1,10 @@
+.page-not-found{
+    margin-top: 17%;
+    margin-bottom: 16%;
+}
+@media only screen and (max-width:576px){
+    .page-not-found{
+        margin-top: 70%;
+        margin-bottom: 92%;
+    }
+}

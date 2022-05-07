@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { Button, FloatingLabel, Form } from 'react-bootstrap';
+import { Button, FloatingLabel, Form, NavLink } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import useInventoryDetail from '../../hooks/useInventoryDetail'
@@ -66,7 +66,6 @@ const InventoryDetail = () => {
 
     return (
         <div className='w-50 mx-auto'>
-            <h2>{inventory.name}</h2>
             <form onSubmit={handlePlaceOrder}>
                 {/* <input className='w-100 mb-2' type="text" value={user?.displayName} name="name" id="name" placeholder='name' required readOnly disabled /> <br /> */}
                 <img className='inventory-img' src={inventory.img} alt="" />
@@ -93,6 +92,8 @@ const InventoryDetail = () => {
                 <input type="number" /> <br />
                 <input type="submit" value="Restock" />
             </form>
+
+            <NavLink as={Link} to="/manageInventory" className='mt-3'><button>Manage Inventories</button></NavLink>
         </div>
     );
 };

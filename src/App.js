@@ -8,7 +8,10 @@ import InventoryDetail from './Pages/inventoryDetail/inventoryDetail'
 import RequiredAuth from './Pages/RequiredAuth/RequiredAuth';
 import Footer from './Pages/Shared/Footer/Footer'
 import AddInventory from './Pages/AddInventory/AddInventory';
-
+import ManageInventories from './Pages/ManageInventories/ManageInventories';
+import MyItems from './Pages/MyItems/MyItems';
+import Blogs from './Pages/Blogs/Blogs';
+import PageNotFound from './Pages/PageNotFound/PageNotFound'
 
 
 function App() {
@@ -20,6 +23,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login></Login>} />
         <Route path="/register" element={<Register></Register>} />
+        <Route path="/blogs" element={<Blogs></Blogs>} />
         <Route path='/inventory/:inventoryId' element={
           <RequiredAuth>
             <InventoryDetail></InventoryDetail>
@@ -30,6 +34,17 @@ function App() {
             <AddInventory></AddInventory>
           </RequiredAuth>
         }></Route>
+        <Route path='/manageInventory' element={
+          <RequiredAuth>
+            <ManageInventories></ManageInventories>
+          </RequiredAuth>
+        }></Route>
+        <Route path='/items' element={
+          <RequiredAuth>
+            <MyItems></MyItems>
+          </RequiredAuth>
+        }></Route>
+        <Route path='*' element={<PageNotFound></PageNotFound>} />
         </Routes>
         <Footer></Footer>
     </div>

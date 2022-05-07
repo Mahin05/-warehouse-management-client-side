@@ -6,7 +6,7 @@ import './Inventory.css'
 const Inventory = ({ inventory }) => {
     const { _id, name,quantity, supplierName,price, img, description } = inventory;
     const navigate = useNavigate();
-    const navigateToServiceDetail = id => {
+    const navigateToInventoryDetail = id => {
         navigate(`/inventory/${id}`);
     }
     return (
@@ -18,7 +18,7 @@ const Inventory = ({ inventory }) => {
                 <h4>Quantity: {quantity}</h4>
                 <h4>Supplier: {supplierName}</h4>
                 <Card.Text>{description}</Card.Text>
-                <Button className='service-btn-style'  onClick={()=>navigateToServiceDetail(_id)}>manage</Button>
+                <Button className='service-btn-style'  onClick={()=>navigateToInventoryDetail(_id)}>manage</Button>
             </Card.Body>
         </Card>
     );
