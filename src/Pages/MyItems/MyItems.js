@@ -3,10 +3,12 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import auth from '../../firebase.init';
-import { Button } from 'react-bootstrap';
+import { Button, Card, NavLink } from 'react-bootstrap';
+import useInventories from '../../hooks/useInventories';
+import './MyItems.css'
 
 const MyItems = () => {
-
+    const [inventories, setInventories] = useInventories()
     const [user] = useAuthState(auth);
     const [items, setItems] = useState([]);
     const navigate = useNavigate()
@@ -23,32 +25,38 @@ const MyItems = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/item/${id}`
+            const url = `http://localhost:5000/inventory/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    // const remaining = inventories.filter(inventory => inventory._id !== id)
-                    // setInventories(remaining);
+                    const remaining = inventories.filter(inventory => inventory._id !== id)
+                    setInventories(remaining);
                 })
         }
     }
     return (
-        <div className='w-50 mx-auto'>
-            <h3>Your Items:{items.length}</h3>
-            {
-                items.map(item => <div
-                    key={item._id}
-                >
-                    <p>{item.name}</p>
-                    <p>{item._id}</p>
-                    <Button className='service-btn-style' onClick={() => handleDelete(item._id)}>Delete</Button>
-
-                </div>)
-            }
+        <div>
+            <h3 className='my-2'>Your Items:{items.length}</h3>
+            <div className='inventories-container'>
+                {
+                    items.map(item => <Card className='container item' style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src={item.img} />
+                        <Card.Body>
+                            <Card.Title>{item.name}</Card.Title>
+                            <h4>${item.price}</h4>
+                            <h4>Quantity: {item.quantity}</h4>
+                            <h4>Supplier: {item.supplierName}</h4>
+                            <Card.Text>{item.description}</Card.Text>
+                            <Button className='item-btn-style' onClick={() => handleDelete(item._id)}>Delete</Button>
+                        </Card.Body>
+                    </Card>)
+                }
+            </div>
         </div>
+
     );
 };
 

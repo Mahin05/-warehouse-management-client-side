@@ -28,9 +28,9 @@ const ManageInventories = () => {
     }
     return (
         <div>
-            <button className='mt-4' onClick={goToAddItemPage}>Add New Item</button>
+            <button className='add-item-style-set' onClick={goToAddItemPage}>Add New Item</button>
             <h2>Manage your Inventories</h2>
-            <div className='services-container'>
+            <div className='inventories-container'>
                 {
                     inventories.map(inventory =>
                         <Card className='container service' style={{ width: '18rem' }}>

@@ -1,10 +1,13 @@
 @media only screen and (max-width:576px){
     .form-style{
-        margin-top: 30px;
+        margin-top: 20%;
         text-align: start;
         width: 60%;
     }
     .forget-pass-style{
         margin-bottom: 10%;
+    }
+    .form-style-login{
+        margin-bottom: 38%;
     }
 }

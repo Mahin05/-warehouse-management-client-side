@@ -1,0 +1,20 @@
+.add-item-btn-style{
+    border: none;
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    color: white;
+}
+.add-form-h2style{
+    margin-top: 6%;
+    margin-bottom: 2%;
+}
+
+@media only screen and (max-width:576px){
+    .add-form-style{
+        margin-top: 30%;
+        margin-bottom: 52%;
+    }
+    .add-form-h2style{
+        margin-top: 40%;
+    }
+}

@@ -30,7 +30,7 @@ const Register = () => {
         navigate('/home');
     }
     return (
-        <div>
+        <div className='form-style-set'>
             <Form onSubmit={handleRegistration} className='container mx-auto form-style'>
                 <h2 className='text-reg text-center'>Register</h2>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
