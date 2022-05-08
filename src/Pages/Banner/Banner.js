@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import prado from '../../Images/prado.jpg'
-import tuv from '../../Images/tuv.jpg'
+import tuv from '../../Images/tuv.webp'
 import bolero from '../../Images/bolero.jpg'
 import './Banner.css'
 
