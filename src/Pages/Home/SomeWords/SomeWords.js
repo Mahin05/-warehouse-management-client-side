@@ -9,7 +9,7 @@ const SomeWords = () => {
         <div>
             <img className='ceo-image' src={CeoImage} alt="" />
             <h5 className='ceo-cmnt container'>Minhajul Islam, Managing Director, ISLAMS VEHICLE CORP.</h5>
-            <p className='ceo-cmnt-p container'>Our Inventory management system has become much better Inventory Management System. We provide all kind of inventory related services. Different kind of functionalities is applied in our site.</p>
+            <p className='ceo-cmnt-p container'>Our Inventory management system has become much better than other Inventory Management Systems. We provide all kind of inventory related services. Different kind of functionalities is applied in our site.</p>
             </div>
         </div> 
     );
