@@ -1,3 +1,10 @@
+body{
+    background-color:rgba(250, 235, 215, 0.123);
+}
+.some-words{
+    color: rgb(11, 112, 214);
+    font-weight: 700;
+}
 .ceo-image{
     width: 10%;
     height: 10%;

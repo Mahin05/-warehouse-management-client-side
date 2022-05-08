@@ -24,16 +24,16 @@ const AddInventory = () => {
     }
     return (
         <div className='w-50 mx-auto'>
-            <h2 className='add-form-h2style'>Please add an item</h2>
+            <h2 className='add-form-h2style'>Please Add An Item</h2>
             <form className='d-flex flex-column add-form-style' onSubmit={handleSubmit(onSubmit)}>
                 <input className='mb-2' value={user.email} placeholder='Email' {...register("email")} />
-                <input className='mb-2' placeholder='item name' {...register("name")} required />
+                <input className='mb-2' placeholder='Enter item name' {...register("name")} required />
                 <textarea style={{ height: '100px' }}
-                    className='mb-2' placeholder='description'{...register("description")} required />
-                <input className='mb-2' placeholder='quantity' type="number" {...register("quantity")} required />
-                <input className='mb-2' placeholder='supplierName' type="text" {...register("supplierName")} required />
-                <input className='mb-2' placeholder='price' type="number" {...register("price")} required />
-                <input className='mb-2' placeholder='photo url' type="text" {...register("img")} />
+                    className='mb-2' placeholder='Write some description'{...register("description")} required />
+                <input className='mb-2' placeholder='What is the quantity?' type="number" {...register("quantity")} required />
+                <input className='mb-2' placeholder='Enter supplier name' type="text" {...register("supplierName")} required />
+                <input className='mb-2' placeholder='What is the price' type="number" {...register("price")} required />
+                <input className='mb-2' placeholder='Enter photo url' type="text" {...register("img")} />
                 <input className='mb-2 add-item-btn-style' type="submit" value="Add New Item" />
             </form>
         </div>

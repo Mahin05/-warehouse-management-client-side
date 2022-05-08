@@ -13,11 +13,11 @@ const Inventory = ({ inventory }) => {
         <Card className='container inventory' style={{ width: '18rem' }}>
             <Card.Img variant="top" src={img} />
             <Card.Body>
-                <Card.Title>{name}</Card.Title>
-                <h4>${price}</h4>
-                <h4>Quantity: {quantity}</h4>
-                <h4>Supplier: {supplierName}</h4>
-                <Card.Text>{description}</Card.Text>
+                <Card.Title className='item-name'>{name}</Card.Title>
+                <h4 className='item-price'>${price}</h4>
+                <h4 className='tag'>Quantity: <span className='qnty'>{quantity}</span> </h4>
+                <h4 className='tag'>Supplier: <span className='qnty'>{supplierName}</span> </h4>
+                <Card.Text className='desc'>{description}</Card.Text>
                 <Button className='inventory-btn-style'  onClick={()=>navigateToInventoryDetail(_id)}>stock update</Button>
             </Card.Body>
         </Card>

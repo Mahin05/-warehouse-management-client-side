@@ -1,6 +1,29 @@
 .inventory{
     margin-bottom: 10%;
-    background-color: rgba(210, 105, 30, 0.021);
+    background-color:rgba(30, 143, 255, 0.123);
+}
+.item-name{
+    font-size: larger;
+    font-weight: 800;
+    color: darkred;
+}
+.item-price{
+    font-size:x-large;
+    color: rgb(0, 60, 255);
+}
+.qnty{
+    font-size: large;
+    font-weight: 600;
+    color: black;
+}
+.desc{
+    font-size:medium;
+    font-weight: 500;
+}
+.tag{
+    font-size: larger;
+    font-weight: 700;
+    color:darkblue;
 }
 .inventory img{
     margin-top: 10px;
@@ -9,7 +32,7 @@
     width: 80%;
 }
 .inventory-btn-style{
-    background-color:darkred;
+    background-color:rgb(223, 108, 26);
     border: none;
 }
 .inventory-btn-style:hover{
