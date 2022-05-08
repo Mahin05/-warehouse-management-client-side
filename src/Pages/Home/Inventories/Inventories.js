@@ -15,6 +15,9 @@ const Inventories = () => {
 
     return (
         <div>
+            {
+                inventories.length === 0 ? <Loading></Loading> : ''
+            }
             <div id='inventory'>
                 <h2 className='inventories-title'>Our Inventories</h2>
                 <div className="inventories-container">
