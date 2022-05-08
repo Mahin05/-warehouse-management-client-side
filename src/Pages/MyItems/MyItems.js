@@ -47,7 +47,7 @@ const MyItems = () => {
             <h3 className='my-2 itm'>Your Items: {items.length}</h3>
             <div className='inventories-container'>
                 {
-                    items.map(item => <Card className='container item' style={{ width: '18rem' }}>
+                    items.map(item => <Card key={item._id}  className='container item' style={{ width: '18rem' }}>
                         <Card.Img className='inventory-img' variant="top" src={item.img} />
                         <Card.Body>
                             <Card.Title className='item-name'>{item.name}</Card.Title>
