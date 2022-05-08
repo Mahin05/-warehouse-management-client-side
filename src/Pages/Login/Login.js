@@ -8,6 +8,7 @@ import auth from '../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import SocialLogin from './SocialLogin/SocialLogin';
+import axios from 'axios';
 
 
 const Login = () => {
@@ -34,16 +35,20 @@ const Login = () => {
     }
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
-    const handleLogin = event => {
+    const handleLogin = async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
-        signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password);
+        const {data} = await axios.post('https://nameless-mesa-10052.herokuapp.com/login',{email});
+        localStorage.setItem('accessToken',data.accessToken);
+        navigate(from, { replace: true });
+        console.log(data);
     }
     if (user) {
         // navigate('/home');
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
     }
     if (error) {
         errorElement = <p className='text-danger mt-3'>Error: {error?.message}</p>

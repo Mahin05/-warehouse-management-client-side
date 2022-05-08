@@ -17,7 +17,7 @@ const InventoryDetail = () => {
     // const { register, handleSubmit } = useForm();
     const [inventory, setInventory] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/inventory/${inventoryId}`;
+        const url = `https://nameless-mesa-10052.herokuapp.com/inventory/${inventoryId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setInventory(data))
@@ -35,7 +35,7 @@ const InventoryDetail = () => {
             console.log(updatedQuantity);
             setInventory(updatedQuantity);
             // send data 
-            const url = `http://localhost:5000/inventory/${inventoryId}`
+            const url = `https://nameless-mesa-10052.herokuapp.com/inventory/${inventoryId}`
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -65,7 +65,7 @@ const InventoryDetail = () => {
         console.log(updatedQuantity);
         setInventory(updatedQuantity);
         // send data 
-        const url = `http://localhost:5000/inventory/${inventoryId}`
+        const url = `https://nameless-mesa-10052.herokuapp.com/inventory/${inventoryId}`
         fetch(url, {
             method: 'PUT',
             headers: {

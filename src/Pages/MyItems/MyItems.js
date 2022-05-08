@@ -11,12 +11,15 @@ const MyItems = () => {
     const [inventories, setInventories] = useInventories()
     const [user] = useAuthState(auth);
     const [items, setItems] = useState([]);
-    const navigate = useNavigate()
     useEffect(() => {
         const getItems = async () => {
             const email = user.email;
             const url = `https://nameless-mesa-10052.herokuapp.com/item?email=${email}`;
-            const { data } = await axios.get(url);
+            const { data } = await axios.get(url,{
+                headers:{
+                    authorization:`Bearer ${localStorage.getItem('accessToken')}`
+                }
+            });
             setItems(data);
         }
         getItems();
