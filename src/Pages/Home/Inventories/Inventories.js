@@ -3,6 +3,7 @@ import { NavLink } from 'react-bootstrap';
 import Inventory from '../Inventory/Inventory';
 import { Link } from 'react-router-dom';
 import './Inventories.css'
+import Loading from '../../Shared/Loading/Loading';
 
 const Inventories = () => {
     const [inventories, setInventories] = useState([]);
@@ -11,6 +12,7 @@ const Inventories = () => {
             .then(res => res.json())
             .then(data => setInventories(data))
     }, [])
+    
     return (
         <div>
             <div id='inventory'>
