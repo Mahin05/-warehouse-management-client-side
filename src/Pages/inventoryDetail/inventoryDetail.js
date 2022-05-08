@@ -44,7 +44,7 @@ const InventoryDetail = () => {
             })
                 .then(res => res.json())
                 .then(result => {
-                    alert('Quantity Added Successfully!!')
+                    alert('Quantity Delivered Successfully!!')
                     console.log(result);
                     event.target.reset();
                 })
