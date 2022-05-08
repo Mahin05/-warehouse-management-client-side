@@ -2,17 +2,18 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
+// Import the functions you need from the SDKs you need
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCTFH7ZbmqO4NtOyjdrHNPWxLsbOxSGY9Y",
-  authDomain: "islams-vehicle-corporation.firebaseapp.com",
-  projectId: "islams-vehicle-corporation",
-  storageBucket: "islams-vehicle-corporation.appspot.com",
-  messagingSenderId: "618790400814",
-  appId: "1:618790400814:web:9871c9867209a2522bc0bf"
+  apiKey: "AIzaSyB9RAXILKAc2FTIoiphB8TcB-UWIVo_do8",
+  authDomain: "islams-vehicle-corporati-6cfe1.firebaseapp.com",
+  projectId: "islams-vehicle-corporati-6cfe1",
+  storageBucket: "islams-vehicle-corporati-6cfe1.appspot.com",
+  messagingSenderId: "950147374815",
+  appId: "1:950147374815:web:96302f0ad96b654efad36a"
 };
 
 // Initialize Firebase
