@@ -6,7 +6,6 @@ import { useForm } from 'react-hook-form';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
-import useInventoryDetail from '../../hooks/useInventoryDetail'
 import './inventoryDetail.css'
 
 
@@ -84,9 +83,9 @@ const InventoryDetail = () => {
 
     return (
         <div className='w-50 mx-auto'>
+            <h2 className='restock-update'>Restock Update</h2>
             <form onSubmit={handleDelivered}>
-                {/* <input className='w-100 mb-2' type="text" value={user?.displayName} name="name" id="name" placeholder='name' required readOnly disabled /> <br /> */}
-                <img className='inventory-img' src={inventory.img} alt="" />
+                <img className='in-img' src={inventory.img} alt="" />
                 <input className='w-100 mb-2' type="email" value={user?.email} name="email" placeholder='email' required readOnly disabled /> <br />
                 <input className='w-100 mb-2' type="text" value={inventoryId} name="inventoryId" placeholder='inventoryId' required readOnly disabled /> <br />
                 <input className='w-100 mb-2' type="text" value={inventory.name} name="inventory" placeholder='service' required readOnly disabled /> <br />
@@ -102,17 +101,17 @@ const InventoryDetail = () => {
                 </FloatingLabel>
                 <input className='w-100 mb-2' type="text" value={inventory.price} name="price" placeholder='price' required readOnly disabled /> <br />
                 <input className='w-100 mb-2' type="text" value={inventory.supplierName} name="price" placeholder='price' required readOnly disabled /> <br />
-                <input className='w-100 mb-2' value={inventory.quantity} type="number" name="quantity" placeholder='quantity' required readOnly /> <br /> <br />
-                {/* <input className='mb-2' value={inventory.quantity} placeholder='quantity' type="number" {...register("quantity")} required readOnly /> */}
-                <input className='btn btn-primary' type="submit" value="Delivered" />
+                <input className='w-100 mb-2' value={inventory.quantity} type="number" name="quantity" placeholder='quantity' required readOnly /> <br />
+                <input className='w-100 mb-2' type="number" name="quantity" placeholder={inventory.quantity? 'Stock Available':'Sold'} required readOnly /> <br /> <br />
+                <input className='btn btn-delivered' type="submit" value="Delivered" />
             </form>
             <form onSubmit={handleRestock}>
-                <h2>Restock the item</h2>
+                <h2 className='restock'>Restock the item</h2>
                 <input className='w-100 mb-2' type="text" name="quantity" placeholder='quantity' required /> <br />
-                <input type="submit" value="Restock" />
+                <input className='btnn' type="submit" value="Restock" />
             </form>
 
-            <NavLink as={Link} to="/manageInventory" className='mt-3'><button>Manage Inventories</button></NavLink>
+            <NavLink as={Link} to="/manageInventory" className='mt-3 '><button className='in-btn-style' >Manage Inventories</button></NavLink>
         </div>
     );
 };

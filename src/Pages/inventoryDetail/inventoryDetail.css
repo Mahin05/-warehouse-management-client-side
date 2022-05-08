@@ -1,18 +1,71 @@
-.checkout-btn-style{
+.checkout-btn-style {
     margin-top: 5px;
 }
-.text-style{
+
+.text-style {
     color: darkred;
 }
-.inventory-img{
-    width: 50%;
-    height: 50%;
+
+.restock-update {
+    margin-top: 2%;
+    font-weight: 700;
+    color: dodgerblue;
+    margin-bottom: 3%;
 }
-@media only screen and (max-width:576px){
-    .form-set-style{
+
+.restock {
+    margin-top: 7%;
+    font-weight: 700;
+    color: dodgerblue;
+    margin-bottom: 3%;
+}
+
+.btn-delivered{
+    background-color: dodgerblue;
+    padding: 10px 40px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+}
+
+.in-btn-style {
+    border: none;
+    padding: 10px 20px;
+    background-color: rgb(223, 108, 26);
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+}
+
+.btnn {
+    border: none;
+    padding: 10px 30px;
+    background-color: dodgerblue;
+    color: white;
+    font-weight: 700;
+    margin-top: 2%;
+    border-radius: 5px;
+
+}
+
+/* .inventory-img{
+    width: 5px;
+    height: 8px;
+} */
+.in-img {
+    width: 35%;
+    height: 35%;
+    margin-bottom: 5%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width:576px) {
+    .form-set-style {
         margin-top: 20%;
     }
-    .checkout-btn-style{
+
+    .checkout-btn-style {
         margin-top: 10px;
         margin-bottom: 68%;
     }

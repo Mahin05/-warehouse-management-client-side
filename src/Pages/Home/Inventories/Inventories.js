@@ -3,8 +3,11 @@ import { NavLink } from 'react-bootstrap';
 import Inventory from '../Inventory/Inventory';
 import { Link } from 'react-router-dom';
 import './Inventories.css'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 
 const Inventories = () => {
+    const [user] = useAuthState(auth);
     const [inventories, setInventories] = useState([]);
     useEffect(() => {
         fetch('https://nameless-mesa-10052.herokuapp.com/inventory')
@@ -12,17 +15,21 @@ const Inventories = () => {
             .then(data => setInventories(data))
     }, [])
     return (
-        <div id='inventory'>
-            <h2 className='inventories-title'>Our Inventories</h2>
-            <div className="inventories-container">
-                {
-                    inventories.map(inventory => <Inventory
-                        key={inventory._id}
-                        inventory={inventory}
-                    ></Inventory>)
-                }
+        <div>
+            <small>Logged in as: {user.email}
+            </small>
+            <div id='inventory'>
+                <h2 className='inventories-title'>Our Inventories</h2>
+                <div className="inventories-container">
+                    {
+                        inventories.map(inventory => <Inventory
+                            key={inventory._id}
+                            inventory={inventory}
+                        ></Inventory>)
+                    }
+                </div>
+                <NavLink as={Link} to="manageInventory" className='mt-3'><button className='mng-invnt'>Manage Inventories</button></NavLink>
             </div>
-            <NavLink as={Link} to="manageInventory" className='mt-3'><button className='mng-invnt'>Manage Inventories</button></NavLink>
         </div>
     );
 };

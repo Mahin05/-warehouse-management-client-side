@@ -27,21 +27,21 @@ const ManageInventories = () => {
         }
     }
     return (
-        <div>
+        <div className='main'>
             <button className='add-item-style-set' onClick={goToAddItemPage}>Add New Item</button>
-            <h2>Manage your Inventories</h2>
+            <h2>Manage Your Inventories</h2>
             <div className='inventories-container'>
                 {
                     inventories.map(inventory =>
-                        <Card className='container service' style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={inventory.img} />
+                        <Card className='container inventory-style' style={{ width: '18rem' }}>
+                            <Card.Img className='inventory-img' variant="top" src={inventory.img} />
                             <Card.Body>
-                                <Card.Title>{inventory.name}</Card.Title>
-                                <h4>${inventory.price}</h4>
-                                <h4>Quantity: {inventory.quantity}</h4>
-                                <h4>Supplier: {inventory.supplierName}</h4>
-                                <Card.Text>{inventory.description}</Card.Text>
-                                <Button className='service-btn-style' onClick={() => handleDelete(inventory._id)}>Delete</Button>
+                                <Card.Title  className='item-name'>{inventory.name}</Card.Title>
+                                <h4 className='item-price'>${inventory.price}</h4>
+                                <h4 className='tag'>Quantity: <span className='qnty'>{inventory.quantity}</span></h4>
+                                <h4 className='tag'>Supplier: <span className='qnty'>{inventory.supplierName}</span></h4>
+                                <Card.Text className='desc'>{inventory.description}</Card.Text>
+                                <Button className='dlt-btn-style' onClick={() => handleDelete(inventory._id)}>Delete</Button>
                             </Card.Body>
                         </Card>
                     )

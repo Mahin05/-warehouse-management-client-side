@@ -1,6 +1,7 @@
 .inventory{
     margin-bottom: 10%;
-    background-color:rgba(30, 143, 255, 0.123);
+    background-color:white;
+    border-radius: 10px;
 }
 .item-name{
     font-size: larger;
@@ -31,10 +32,11 @@
     height: 70%;
     width: 80%;
 }
-.inventory-btn-style{
+.inventoryyy-btn-style{
     background-color:rgb(223, 108, 26);
+    font-weight: 700;
     border: none;
 }
-.inventory-btn-style:hover{
+.inventoryyy-btn-style:hover{
     background-color: rgba(139, 0, 0, 0.815);
 }

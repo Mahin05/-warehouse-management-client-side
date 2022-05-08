@@ -1,17 +1,33 @@
-.item-btn-style{
-    background-color:darkred;
+.myItem-min-height{
+    min-height: 355px;
+}
+.item-btn-style {
+    background-color: darkred;
     border: none;
 }
-.inventories-container{
+
+.inventories-container {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-   margin-top: 2%;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 2%;
+
 }
-.item{
+.itm{
+    color: rgb(0, 153, 255);
+    font-weight: 700;
+}
+
+.item {
     margin-bottom: 4%;
+    border-radius: 10px;
+
 }
-@media only screen and (max-width:576px){
-    .inventories-container{
-        grid-template-columns: repeat(1,1fr);
+
+@media only screen and (max-width:576px) {
+    .inventories-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .myItem-min-height{
+        min-height: 600px;
     }
 }

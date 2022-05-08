@@ -18,7 +18,7 @@ const Inventory = ({ inventory }) => {
                 <h4 className='tag'>Quantity: <span className='qnty'>{quantity}</span> </h4>
                 <h4 className='tag'>Supplier: <span className='qnty'>{supplierName}</span> </h4>
                 <Card.Text className='desc'>{description}</Card.Text>
-                <Button className='inventory-btn-style'  onClick={()=>navigateToInventoryDetail(_id)}>stock update</Button>
+                <Button className='inventoryyy-btn-style'  onClick={()=>navigateToInventoryDetail(_id)}>stock update</Button>
             </Card.Body>
         </Card>
     );

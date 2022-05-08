@@ -3,6 +3,8 @@
     padding: 10px 20px;
     background-color: dodgerblue;
     color: white;
+    border: none;
+    border-radius: 5px;
 }
 .add-form-h2style{
     margin-top: 6%;

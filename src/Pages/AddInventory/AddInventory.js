@@ -19,6 +19,7 @@ const AddInventory = () => {
         })
             .then(res => res.json())
             .then(result => {
+                alert('Item added successfully!!')
                 console.log(result);
             })
     }
