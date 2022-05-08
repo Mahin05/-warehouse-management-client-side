@@ -4,6 +4,7 @@ img{
 }
 .text-color{
     color:darkorange;
+    font-weight: 800;
 }
 
 @media only screen and (max-width:576px){
@@ -13,6 +14,6 @@ img{
     }
     .text-color{
         color:darkorange;
-        font-size: 122%;
+        font-size: 110%;
     }
 }

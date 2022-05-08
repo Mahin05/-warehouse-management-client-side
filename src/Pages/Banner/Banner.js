@@ -11,7 +11,7 @@ const Banner = () => {
             <Carousel.Item>
                 <img
                     className="d-block"
-                    src={prado}
+                    src={tuv}
                     alt="First slide"
                 />
                 <Carousel.Caption>
@@ -21,7 +21,7 @@ const Banner = () => {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src={tuv}
+                    src={prado}
                     alt="Second slide"
                 />
 

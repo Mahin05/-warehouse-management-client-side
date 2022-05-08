@@ -12,7 +12,7 @@ const Inventories = () => {
             .then(res => res.json())
             .then(data => setInventories(data))
     }, [])
-    
+
     return (
         <div>
             <div id='inventory'>
